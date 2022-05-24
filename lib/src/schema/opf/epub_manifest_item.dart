@@ -42,7 +42,7 @@ class EpubManifestItem {
         Properties == otherAs.Properties;
   }
 
-  EpubManifestItem clone(
+  EpubManifestItem clone({
     String? Id,
     String? Href,
     String? MediaType,
@@ -52,7 +52,7 @@ class EpubManifestItem {
     String? Fallback,
     String? FallbackStyle,
     String? Properties,
-  ) {
+  }) {
     var obj = EpubManifestItem();
     obj.Id = Id ?? this.Id;
     obj.Href = Href ?? this.Href;

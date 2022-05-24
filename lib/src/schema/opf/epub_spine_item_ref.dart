@@ -17,6 +17,16 @@ class EpubSpineItemRef {
     return IdRef == otherAs.IdRef && IsLinear == otherAs.IsLinear;
   }
 
+  EpubSpineItemRef clone(
+    String? IdRef,
+    bool? IsLinear,
+  ) {
+    var obj = EpubSpineItemRef();
+    obj.IdRef = IdRef ?? this.IdRef;
+    obj.IsLinear = IsLinear ?? this.IsLinear;
+    return obj;
+  }
+
   @override
   String toString() {
     return 'IdRef: $IdRef';

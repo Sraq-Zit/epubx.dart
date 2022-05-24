@@ -42,6 +42,30 @@ class EpubManifestItem {
         Properties == otherAs.Properties;
   }
 
+  EpubManifestItem clone(
+    String? Id,
+    String? Href,
+    String? MediaType,
+    String? MediaOverlay,
+    String? RequiredNamespace,
+    String? RequiredModules,
+    String? Fallback,
+    String? FallbackStyle,
+    String? Properties,
+  ) {
+    var obj = EpubManifestItem();
+    obj.Id = Id ?? this.Id;
+    obj.Href = Href ?? this.Href;
+    obj.MediaType = MediaType ?? this.MediaType;
+    obj.MediaOverlay = MediaOverlay ?? this.MediaOverlay;
+    obj.RequiredNamespace = RequiredNamespace ?? this.RequiredNamespace;
+    obj.RequiredModules = RequiredModules ?? this.RequiredModules;
+    obj.Fallback = Fallback ?? this.Fallback;
+    obj.FallbackStyle = FallbackStyle ?? this.FallbackStyle;
+    obj.Properties = Properties ?? this.Properties;
+    return obj;
+  }
+
   @override
   String toString() {
     return 'Id: $Id, Href = $Href, MediaType = $MediaType, Properties = $Properties, MediaOverlay = $MediaOverlay';
